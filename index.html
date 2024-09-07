@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="data()">
+        User Nmae:<input type="email" id="n"><br><br>
+        passward:<input type="password" id="n1"><br><br>
+        Confirm passward:<input type="password" id="n2"><br><br>
+        Contact:<input type="text" id="n3"><br><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function data(){
+        var a=document.getElementById("n").value;
+        var b=document.getElementById("n1").value;
+        var c=document.getElementById("n2").value;
+        var d=document.getElementById("n3").value;
+
+        if(a==""||b==""||c==""||d==""){
+            alert("Fill the given data compulsary")
+        }else if(c!==b){
+            alert("Enter the same passward")
+        }else if(d.length<10 || d.length>10){
+            alert("Enter the correct mobile number")
+        }else{
+            alert("Submition completed")
+        }
+        }
+        
+    </script>
+</body>
+</html>
